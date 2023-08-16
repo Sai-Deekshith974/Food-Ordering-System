@@ -1,0 +1,24 @@
+<div>
+<div class="navbar">
+    <ul>
+        <li><a href="/dashboard" class="home">Lemon Companies</a></li>
+        <!-- <input type="text" placeholder="search the restaurants..." class="search" #val /> -->
+        <!-- <button class="search_button" (click)="search_bar(val)">Search</button> -->
+        <li class="rig"><a href="/update_profile">update profile</a></li>
+        <li class="rig"><a href="/history">History</a></li>
+        <li class="rig"><a (click)="logout()" class="cursor">logout</a></li>
+ </ul>
+</div>
+<div class="history">
+    <div *ngFor="let ele of user_history">
+        <div class="text">
+            <p>You have ordered the items: </p>
+            <div *ngFor="let items of ele.items[0];let i = index">
+                <p>{{items}}({{ele.quantity[0][i]}}) with Rs.{{ele.prices[0][i]}}</p>
+            </div>
+            <p>At {{ele.time}} IST</p>
+        </div>
+    </div>
+</div>
+</div>
+

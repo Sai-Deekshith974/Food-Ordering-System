@@ -1,0 +1,32 @@
+<body class="container">
+    <div>
+        <ul>
+            <li><a href="/dashboard" class="home">Lemon Companies</a></li>
+            <!-- <input type="text" placeholder="search the restaurants..." class="search" #val /> -->
+			<!-- <button class="search_button" (click)="search_bar(val)">Search</button> -->
+			<li class="rig"><a href="/update_profile">update profile</a></li>
+			<li class="rig"><a href="/history">History</a></li>
+			<li class="rig"><a (click)="logout()" class="cursor">logout</a></li>
+     </ul>
+    </div>
+    <div class="login_div">
+        <div class="login">
+        <u><h1>Update Profile</h1></u>
+        <h3>First Name:</h3>
+        <input type="text" placeholder="Enter your first name" value="{{user_profile[0][0]?.firstname}}" #fn/>
+        <h3>Last Name:</h3>
+        <input type="text" placeholder="Enter your last name" value="{{user_profile[0][0]?.lastname}}" #ln/>
+        <h3>Mobile Number:</h3>
+        <input type="text" placeholder="Enter your Mobile Number" value="{{user_profile[0][0]?.mobileno}}" #mn/>
+        <h3>Email Id:</h3>
+        <input type="text" placeholder="Enter your email id" value="{{user_profile[0][0]?.emailid}}" disabled />
+        <h3>Old Password:</h3>
+        <input type="text" placeholder="Enter your old password" value="{{user_profile[0][0]?.password}}" disabled /><br>
+        <h3>New Password:</h3>
+        <input type="text" placeholder="Enter your new password" #cps/><br>
+        <h3>Confirm New Password:</h3>
+        <input type="text" placeholder="Enter your new password again" #cps1/>
+        <button (click)="update(fn,ln,mn,cps,cps1)">Update</button>
+        </div>
+    </div>
+</body>

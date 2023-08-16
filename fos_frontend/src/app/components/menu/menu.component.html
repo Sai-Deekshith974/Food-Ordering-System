@@ -1,0 +1,38 @@
+<div>
+    <div class="navbar">
+        <ul>
+			<li><a href="/dashboard" class="home">Lemon Companies</a></li>
+            <!-- <input type="text" placeholder="search the restaurants..." class="search" #val /> -->
+			<!-- <button class="search_button" (click)="search_bar(val)">Search</button> -->
+			<li class="rig"><a href="/update_profile">update profile</a></li>
+			<li class="rig"><a href="/history">History</a></li>
+			<li class="rig"><a (click)="logout()" class="cursor">logout</a></li>
+     </ul>
+    </div>
+    <div class="container">
+        <div class="text">
+            <u><h1>Welcome to {{restaurant_name}}</h1></u>
+            <table class="simple">
+                <tr>
+                <th><h2>Enter your Table No: </h2></th>
+                <th><input type="number" value="0" #table_no/></th>
+                </tr>
+            </table>
+            <h2>Menu:</h2>
+        </div>
+        <table class="menu">
+            <tr>
+            <th>Items</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            </tr>
+            <tr *ngFor="let item of items[0];let i = index">
+            <td>{{item}}</td>
+            <td>{{prices[0][i]}}</td>
+            <td><input type="number" placeholder="Enter the quantity" value="0" id="id{{i}}"/><button (click)="book(i)" class="confirm">Confirm</button></td>
+            </tr>
+        </table>
+        <button class="cancel" (click)="cancel()">Cancel</button>
+        <button class="book" (click)="gotobill(table_no)">Book Order</button>
+      </div>
+</div>

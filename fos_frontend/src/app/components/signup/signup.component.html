@@ -1,0 +1,32 @@
+<body class="container">
+    <div>
+        <ul>
+            <li class="non"><a href="/login">Login</a></li>
+            <li class="non"><a href="/signup">Signup</a></li>
+            <li class="non"><a href="#contact">Contact</a></li>
+           <li class="non"><a href="#about">About</a></li>
+           <li class="non"><a class="active" href="#home">Home</a></li>
+           <li style="float: left;"><a href="/">Lemon Companies</a></li>
+     </ul>
+    </div>
+    <div class="login_div">
+        <div class="login">
+        <u><h1>SignUp</h1></u>
+        <h3>First Name:</h3>
+        <input type="text" placeholder="Enter your first name" #fn/>
+        <h3>Last Name:</h3>
+        <input type="text" placeholder="Enter your last name" #ln/>
+        <h3>Mobile Number:</h3>
+        <input type="text" placeholder="Enter your Mobile Number" #mn/>
+        <h3>Email Id:</h3>
+        <input type="text" placeholder="Enter your email id" #ei/>
+        <h3>Password:</h3>
+        <input type="password" placeholder="Enter your password" #ps/><br>
+        <h3>Confirm Password:</h3>
+        <input type="password" placeholder="Enter your password again" #cps/>
+        <button (click)="signup(fn,ln,mn,ei,ps,cps)">Signup</button>
+        </div>
+    </div>
+</body>
+    
+

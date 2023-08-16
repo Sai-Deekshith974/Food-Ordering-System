@@ -1,0 +1,38 @@
+<body>
+	<div class="navbar">
+        <ul>
+			<li><a href="/dashboard" class="home">Lemon Companies</a></li>
+            <input type="text" placeholder="search the restaurants..." class="search" #val />
+			<button class="search_button" (click)="search_bar(val)">Search</button>
+			<li class="rig"><a href="/update_profile">update profile</a></li>
+			<li class="rig"><a href="/history">History</a></li>
+			<li class="rig"><a (click)="logout()" class="cursor">logout</a></li>
+     </ul>
+    </div>
+	<div class="container" *ngIf="check">
+		<div *ngFor="let todo of todos[0]">
+			<div class="one">
+				<img src="../../../assets/images/{{todo.image}}" class="image" alt="Avatar" style="width: 100%;">
+				<div class="text">
+				<h1>{{todo.name}}</h1>
+				<p>Description:{{todo.description}}</p>
+				<p>Address:{{todo.address}}</p>
+				<button (click)="reserve(todo.id)">see more</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container" *ngIf="!check">
+		<div *ngFor="let todo of filtered">
+			<div class="one">
+				<img src="../../../assets/images/{{todo.image}}" class="image" alt="Avatar" style="width: 100%;">
+				<div class="text">
+				<h1>{{todo.name}}</h1>
+				<p>Description:{{todo.description}}</p>
+				<p>Address:{{todo.address}}</p>
+				<button (click)="reserve(todo.id)">see more</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>

@@ -1,0 +1,40 @@
+.container{
+    position: fixed;
+    min-width: 100%;
+    background-image: url("F:/js/background2.jpg");
+	background-repeat: no-repeat;
+    background-size:cover;
+}
+li{
+    float: right;
+}
+li a:hover{
+    color:orange;
+}
+li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size:20px;
+}
+h1{
+    font-size:50px;
+    padding-top:180px;
+    padding-right: 20px;
+    color: #7ad897;
+    text-align: right;
+}
+h3{
+    color:#7ad897;
+    font-size: 20px;
+    text-align: right;		
+}
+button{
+    float: right;
+    margin-right:170px;
+    height:40px;
+    width: 100px;
+    background-color: #fab53b;
+}

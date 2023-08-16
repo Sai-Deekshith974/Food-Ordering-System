@@ -1,0 +1,54 @@
+.container{
+    position: fixed;
+    min-width: 100%;
+    background-image: url("F:/js/background2.jpg");
+	background-repeat: no-repeat;
+    background-size:cover;
+}
+/* ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  } */
+li{
+    float: right;
+}
+li a:hover{
+    color:orange;
+}
+li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size:20px;
+}
+.login_div{
+    color: rgb(93, 238, 93);
+    position: absolute;
+    margin-top:70px;
+    right: 150px;
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+    width:400px;
+}
+.login_div h1{
+    text-align: center;
+}
+.login_div h3{
+    padding-left: 70px;
+}
+.login_div input{
+    margin-left:70px;
+    width:250px;
+}
+.login_div button{
+    margin-top:30px;
+    margin-left: 70px;
+    margin-bottom:30px;
+    background-color:rgb(231, 155, 14);
+    height:30px;
+    width:70px;
+}

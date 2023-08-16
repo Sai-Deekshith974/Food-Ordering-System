@@ -1,0 +1,33 @@
+<div>
+    <div class="navbar">
+        <ul>
+			<li><a href="/dashboard" class="home">Lemon Companies</a></li>
+            <!-- <input type="text" placeholder="search the restaurants..." class="search" #val /> -->
+			<!-- <button class="search_button" (click)="search_bar(val)">Search</button> -->
+			<li class="rig"><a href="/update_profile">update profile</a></li>
+			<li class="rig"><a href="/history">History</a></li>
+			<li class="rig"><a (click)="logout()" class="cursor">logout</a></li>
+     </ul>
+    </div>
+    <div class="container">
+        <div class="text">
+            <u><h1>Welcome to {{restaurant_name}}</h1></u>
+            <h2>Menu:</h2>
+        </div>
+        <table>
+            <tr>
+            <th>Items</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            </tr>
+            <tr *ngFor="let item of items[0][0];let i = index">
+            <td>{{item}}</td>
+            <td>{{prices[0][0][i]}}</td>
+            <td>{{quantity[0][0][i]}}</td>
+            </tr>
+        </table>
+        <!-- <h4 class="book">Total:{{total}}</h4> -->
+        <button class="cancel" (click)="cancel()">Cancel</button>
+        <button class="book" (click)="gotobill()">Pay:{{total}}</button>
+      </div>
+</div>
