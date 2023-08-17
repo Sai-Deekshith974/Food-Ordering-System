@@ -1,5 +1,5 @@
 var mongojs=require('mongojs');
-var db = mongojs('mongodb://mits:mits01@cluster0-shard-00-00-gf6mr.mongodb.net:27017/food_order?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin', ['user','restaurants']);
+var db = mongojs('mongodb://####:######@cluster0-shard-00-00-gf6mr.mongodb.net:27017/food_order?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin', ['user','restaurants']);
 var express = require('express');
 const bodyParser = require("body-parser");
 const router = express.Router();
