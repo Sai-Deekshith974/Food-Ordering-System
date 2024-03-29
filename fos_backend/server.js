@@ -87,12 +87,12 @@ app.post('/order',function(req,res){
         var transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-              user: 'deekshithdeekshu64@gmail.com',
-              pass: 'Deekshith@1234'
+              user: 'yourEmail',
+              pass: 'yourPassword'
             }
           });
           var mailOptions = {
-            from: 'deekshithdeekshu64@gmail.com',
+            from: 'YourEmail',
             to: docs[0].email,
             subject: 'Your New Order',
             text: `Food Ordering System`,
