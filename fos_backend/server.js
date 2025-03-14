@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(
     cors({
         origin:"*",
-    })
+    }) 
 )
 app.post('/register',function(req,res){
     var a={firstname:req.body.firstname,lastname:req.body.lastname,mobileno:req.body.mobileno,emailid:req.body.emailid,password:req.body.password};
